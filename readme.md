@@ -1,2 +1,4 @@
-## This is a java exam project
+
+## This is an awesome java exam project
+
 blabla
