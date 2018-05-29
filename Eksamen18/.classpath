@@ -158,6 +158,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/AfleveringTomcat/External/mysql-connector-java-5.1.10-bin.jar"/>
+	<!--<classpathentry kind="lib" path="/AfleveringTomcat/External/mysql-connector-java-5.1.10-bin.jar"/>-->
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

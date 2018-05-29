@@ -17,7 +17,7 @@ public class UserDao {
 		Connection con = null;
 
 		try {
-			con = JDBCConnectionFactory.getNewConnection();
+			con = JDBCConnectionFactory.getConnection();
 
 			String sql = "SELECT * FROM user WHERE user_id = ?";
 
@@ -125,8 +125,8 @@ public class UserDao {
 		}
 
 	}
-	
-								//ALTER USER
+
+	// ALTER USER
 	public static void alterUser(User user) {
 
 		Connection con = null;
@@ -134,9 +134,9 @@ public class UserDao {
 
 			con = JDBCConnectionFactory.getNewConnection();
 
-			String sql = "UPDATE user (user_name, user_username, user_mail, user_phone, user_password) VALUES(?,?, ?, ?, ?)" + "WHERE id = ?";
-			
-			
+			String sql = "UPDATE user (user_name, user_username, user_mail, user_phone, user_password) VALUES(?,?, ?, ?, ?)"
+					+ "WHERE id = ?";
+
 			PreparedStatement prep = con.prepareStatement(sql);
 			prep.setString(1, user.getUser_name());
 			prep.setString(2, user.getUser_username());
@@ -145,9 +145,9 @@ public class UserDao {
 			prep.setString(5, user.getUser_password());
 
 			if (isInDatabase()) {
-				
+
 			}
-			
+
 			prep.executeUpdate();
 
 		} catch (SQLException e) {
@@ -158,7 +158,10 @@ public class UserDao {
 		}
 
 	}
-	
-		
+
+	private static boolean isInDatabase() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
+}
